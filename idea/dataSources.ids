@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - carrolista@localhost" uuid="6b35f35e-2ee8-4ef0-a093-47aee008276e">
+    <database-info product="MySQL" version="5.6.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="carrolista"/>
+    <table name="avaliacao" schema="" catalog="carrolista" type="TABLE">
+      <column name="idAvaliacao" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idUsuario" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="idCliente" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="idServico" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="avaliacao" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="comentario" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="data" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="idAvaliacao"/>
+    </table>
+    <table name="bairro" schema="" catalog="carrolista" type="TABLE">
+      <column name="idBairro" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nomeBairro" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="estatus" sqlType="VARCHAR" precision="1" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idBairro"/>
+    </table>
+    <table name="clientes" schema="" catalog="carrolista" type="TABLE">
+      <column name="idCliente" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nomeCliente" sqlType="VARCHAR" precision="55" scale="0" nullable="false" jdbcType="12"/>
+      <column name="endCliente" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="numCliente" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="bairroCliente" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="cepCliente" sqlType="VARCHAR" precision="9" scale="0" nullable="false" jdbcType="12"/>
+      <column name="telCliente" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="celCliente" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="descCliente" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="estatus" sqlType="VARCHAR" precision="1" scale="0" nullable="false" jdbcType="12"/>
+      <column name="idUsuario" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="image1" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="image2" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="image3" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idCliente"/>
+    </table>
+    <table name="resposta" schema="" catalog="carrolista" type="TABLE">
+      <column name="idResposta" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="resposta" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="idAvaliacao" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="data" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="idResposta"/>
+    </table>
+    <table name="servicos" schema="" catalog="carrolista" type="TABLE">
+      <column name="idServico" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nomeServico" sqlType="VARCHAR" precision="155" scale="0" nullable="false" jdbcType="12"/>
+      <column name="estatus" sqlType="VARCHAR" precision="1" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idServico"/>
+    </table>
+    <table name="tb_serv_cli" schema="" catalog="carrolista" type="TABLE">
+      <column name="idClientes" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="idServicos" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="descricao" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="estatus" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="usuarios" schema="" catalog="carrolista" type="TABLE">
+      <column name="idUsuario" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nomeUsuario" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="emailUsuario" sqlType="VARCHAR" precision="55" scale="0" nullable="false" jdbcType="12"/>
+      <column name="senhaUsuario" sqlType="VARCHAR" precision="55" scale="0" nullable="false" jdbcType="12"/>
+      <column name="tpUser" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idUsuario"/>
+      <index name="emailUsuario" unique="true" columns="emailUsuario"/>
+      <index name="nomeUsuario" unique="true" columns="nomeUsuario"/>
+    </table>
+  </data-source>
+</component>

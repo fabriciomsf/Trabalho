@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/about.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/class/classServicos.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contato.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gerarRelat.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/menuUserCli.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/userAlterarSenha.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/userPerfil.php" charset="UTF-8" />
+  </component>
+</project>
